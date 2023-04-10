@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>money-calculation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    
-<section>
-    <h1 class="text-3xl text-center font-bold text-yellow-600">money info</h1>
-</section>
-<main class="flex">
-    <div>
-        <img src="./math.svg" alt="">
-    </div>
-    <div>
-        
-    </div>
-</main>
+  </head>
+  <body>
+    <section>
+      <h1 class="text-3xl text-center font-bold text-yellow-600">money info</h1>
+    </section>
+    <main class="flex justify-around">
+      <div>
+        <img class="w-full h-full" src="./math.svg" alt="" />
+      </div>
+      <div class="w-[400px] flex flex-col items-center justify-center">
+        <div class="flex justify-center">
+          <h1 class="text-2xl">Income</h1>
+        </div>
+        <div class="flex gap-4 mt-4">
+          <h1>total income:</h1>
+          <input id="total-amount" class="border bg-slate-200" type="text" />
+        </div>
+
+        <h1 class="text-2xl mt-4 text-center">Expenses</h1>
+
+        <div class="flex justify-end">
+          <div>
+            <div class="flex gap-4 mt-4">
+              <h1>Food:</h1>
+              <input id="Food" class="border ml-9 bg-slate-200 justify-center" type="text" />
+            </div>
+            <div class="flex gap-4 mt-4">
+              <h1>Rent:</h1>
+              <input id="Rent" class="border ml-10 bg-slate-200 justify-center" type="text" />
+            </div>
+            <div class="flex gap-4 mt-4">
+              <h1>Clothes:</h1>
+              <input id="Clothes" class="border ml-5 bg-slate-200 justify-center" type="text" />
+            </div>
+          </div>
+        </div>
+        <button id="total-income" class="px-4 py-3 mt-2 text-center bg-green-300 rounded-md">Calculate</button>
+        <h1>Total Expenses: <span id="totalSum"></span></h1>
+      </div>
+    </main>
     <script src="./bank.js"></script>
-</body>
+  </body>
 </html>
